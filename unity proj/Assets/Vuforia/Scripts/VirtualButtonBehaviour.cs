@@ -18,5 +18,9 @@ namespace Vuforia
     /// </summary>
     public class VirtualButtonBehaviour : VirtualButtonAbstractBehaviour
     {
+        void Start()
+        {
+
+        }
     }
 }
