@@ -13,9 +13,12 @@ namespace Vuforia
     public class ClockVBEventHandler : MonoBehaviour, IVirtualButtonEventHandler
     {
         private GameObject clock;
-        private GameObject cube;
+        private GameObject clock2;
         private bool leftrotate = false;
         private bool rightrotate = false;
+        private GameObject[] objects;
+        private int currentObject = 0;
+        private int texturecounter;
         void Start()
         {
             VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
@@ -24,17 +27,21 @@ namespace Vuforia
                 vbs[i].RegisterEventHandler(this);
             }
             clock = transform.FindChild("Clock_panel").gameObject;
-            cube = transform.FindChild("Cube").gameObject;
-            cube.SetActive(false);
+            clock2 = transform.FindChild("Clock").gameObject;
+            objects = new GameObject[2] {clock,clock2};
+            for(int i = 1; i < objects.Length; i++)
+            {
+                objects[i].SetActive(false);
+            }
         }
-        
+
         void Update()
         {
            
             if(rightrotate || leftrotate)
             {
 
-                var rotationVector = clock.transform.rotation.eulerAngles;
+                var rotationVector = objects[currentObject].transform.rotation.eulerAngles;
                 if(rightrotate)
                 {
                     rotationVector.y += 50 * Time.deltaTime;
@@ -43,10 +50,7 @@ namespace Vuforia
                 {
                     rotationVector.y -= 50 * Time.deltaTime;
                 }
-                
-
-                clock.transform.rotation = Quaternion.Euler(rotationVector);
-                //clock.transform.Rotate(0, 10*Time.deltaTime, 0);
+                objects[currentObject].transform.rotation = Quaternion.Euler(rotationVector);
             }
         }
         public void OnButtonPressed(VirtualButtonAbstractBehaviour vb)
@@ -66,8 +70,12 @@ namespace Vuforia
                     }
                     break;
                 case "objectswitch":
-                    clock.SetActive(false);
-                    cube.SetActive(true);
+                    objects[currentObject].SetActive(false);
+                    var rotVec = objects[currentObject].transform.rotation.eulerAngles;
+                    currentObject++;
+                    currentObject %= objects.Length;
+                    objects[currentObject].SetActive(true);
+                    objects[currentObject].transform.rotation = Quaternion.Euler(rotVec);
                     break;
             }
         }
