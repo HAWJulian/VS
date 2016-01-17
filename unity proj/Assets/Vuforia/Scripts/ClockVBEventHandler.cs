@@ -13,10 +13,18 @@ namespace Vuforia
     public class ClockVBEventHandler : MonoBehaviour, IVirtualButtonEventHandler
     {
 		/* All GameObjects */
-        private GameObject clock;
+		/*
         private GameObject clock2;
 		private GameObject clock3;
 		private GameObject clock4;
+		private GameObject clock5;
+		private GameObject clock6;
+		private GameObject clock7;
+		private GameObject clock8;
+		private GameObject clock9;
+		private GameObject clock10;
+		*/
+
 		/* booleans to control rotation */
         private bool leftrotate = false;
         private bool rightrotate = false;
@@ -30,7 +38,8 @@ namespace Vuforia
         private int currentObject = 0;
         private int texturecounter = 0;
 		private int SIZE = 3;
-		private enum State {OBJECT, TEXTURE};
+		public enum State {OBJECT, TEXTURE};
+		private State state;
 
         void Start()
         {
@@ -42,10 +51,6 @@ namespace Vuforia
             }
 
             //add objects
-            clock = GameObject.Find("Clock_1").gameObject;
-            clock2 = GameObject.Find("Clock_2").gameObject;
-			clock3 = GameObject.Find("Clock_2_top").gameObject;
-
 			GameObject clock_2 = GameObject.Find ("Clock_2").gameObject;
 			GameObject clock_3 = GameObject.Find ("Clock_3").gameObject;
 			GameObject clock_4 = GameObject.Find ("Clock_4").gameObject;
@@ -75,17 +80,6 @@ namespace Vuforia
 			GameObject clock_8_bot = GameObject.Find ("Clock_8_bot").gameObject;
 			GameObject clock_9_bot = GameObject.Find ("Clock_9_bot").gameObject;
 			GameObject clock_10_bot = GameObject.Find ("Clock_10_bot").gameObject;
-		
-
-
-			clock4 = clock3;
-
-			//TODO: create new Objects
-
-            //insert into array "objects"
-            objects = new GameObject[2] {clock,clock2};
-			topsalt = new GameObject[2] {clock3, clock4};
-
 			//TODO: Insert real models
 			objects2 = new GameObject[][]{
 				new GameObject[3]{ clock_2, clock_3, clock_4 },
@@ -162,11 +156,13 @@ namespace Vuforia
                     break;
                 //on objectswitch, set current object as inactive, aktivate next obeject in list
 				case "objectswitch":
-					HandleSwitchPressed (State.OBJECT);
+					state = State.OBJECT;
+					HandleSwitchPressed (state);
                     break;
 
                 case "textureswitch":
-					HandleSwitchPressed (State.TEXTURE);
+					state = State.TEXTURE;
+					HandleSwitchPressed (state);
 					break;
 			}
 		}
