@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 7ce1aa7a915ba21438a9706dfe88cc30
+timeCreated: 1453042063
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Boole
+    100004: Boole.1
+    100006: Circle
+    100008: Circle.2
+    100010: Circle.3
+    100012: Circle.4
+    100014: Handel_grip_
+    100016: Handel_grip_.2
+    100018: Handel_leath
+    100020: Handel_leath.2
+    100022: Handel_metal
+    100024: Handel_metal.2
+    100026: HeartRate_se
+    100028: HeartRate_se.2
+    100030: Main_body
+    100032: Main_body.2
+    100034: Null-Objekt
+    100036: Null-Objekt.2
+    100038: Power_button
+    100040: Power_button.2
+    100042: Screen
+    100044: Screen.2
+    100046: weel_button
+    100048: weel_button.2
+    100050: wheel_button
+    100052: wheel_button.2
+    100054: "W\xFCrfel"
+    100056: "W\xFCrfel.2"
+    100058: "W\xFCrfel.3"
+    100060: "W\xFCrfel.4"
+    400000: //RootNode
+    400002: Boole
+    400004: Boole.1
+    400006: Circle
+    400008: Circle.2
+    400010: Circle.3
+    400012: Circle.4
+    400014: Handel_grip_
+    400016: Handel_grip_.2
+    400018: Handel_leath
+    400020: Handel_leath.2
+    400022: Handel_metal
+    400024: Handel_metal.2
+    400026: HeartRate_se
+    400028: HeartRate_se.2
+    400030: Main_body
+    400032: Main_body.2
+    400034: Null-Objekt
+    400036: Null-Objekt.2
+    400038: Power_button
+    400040: Power_button.2
+    400042: Screen
+    400044: Screen.2
+    400046: weel_button
+    400048: weel_button.2
+    400050: wheel_button
+    400052: wheel_button.2
+    400054: "W\xFCrfel"
+    400056: "W\xFCrfel.2"
+    400058: "W\xFCrfel.3"
+    400060: "W\xFCrfel.4"
+    2300000: Circle
+    2300002: Handel_leath
+    2300004: Handel_metal
+    2300006: "W\xFCrfel"
+    2300008: "W\xFCrfel.3"
+    3300000: Circle
+    3300002: Handel_leath
+    3300004: Handel_metal
+    3300006: "W\xFCrfel"
+    3300008: "W\xFCrfel.3"
+    4300000: Circle
+    4300002: "W\xFCrfel"
+    4300004: Handel_leath
+    4300006: Handel_metal
+    4300008: "W\xFCrfel.3"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

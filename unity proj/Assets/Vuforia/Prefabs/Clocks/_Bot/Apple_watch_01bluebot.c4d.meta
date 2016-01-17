@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 2b4ef2cfe3da0594d80f04272e8e05d5
+timeCreated: 1453040569
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Circle
+    100004: Circle.2
+    100006: Handel_grip_
+    100008: Handel_grip_.2
+    100010: Handel_leath
+    100012: Handel_leath.2
+    100014: Handel_metal
+    100016: Handel_metal.2
+    100018: HeartRate_se
+    100020: HeartRate_se.2
+    100022: Main_body
+    100024: Main_body.2
+    100026: Null-Objekt
+    100028: Null-Objekt.2
+    100030: Power_button
+    100032: Power_button.2
+    100034: Screen
+    100036: Screen.2
+    100038: weel_button
+    100040: weel_button.2
+    100042: wheel_button
+    100044: wheel_button.2
+    100046: "W\xFCrfel"
+    100048: "W\xFCrfel.2"
+    400000: //RootNode
+    400002: Circle
+    400004: Circle.2
+    400006: Handel_grip_
+    400008: Handel_grip_.2
+    400010: Handel_leath
+    400012: Handel_leath.2
+    400014: Handel_metal
+    400016: Handel_metal.2
+    400018: HeartRate_se
+    400020: HeartRate_se.2
+    400022: Main_body
+    400024: Main_body.2
+    400026: Null-Objekt
+    400028: Null-Objekt.2
+    400030: Power_button
+    400032: Power_button.2
+    400034: Screen
+    400036: Screen.2
+    400038: weel_button
+    400040: weel_button.2
+    400042: wheel_button
+    400044: wheel_button.2
+    400046: "W\xFCrfel"
+    400048: "W\xFCrfel.2"
+    2300000: Handel_leath
+    2300002: Handel_metal
+    2300004: "W\xFCrfel"
+    3300000: Handel_leath
+    3300002: Handel_metal
+    3300004: "W\xFCrfel"
+    4300000: Handel_leath
+    4300002: Handel_metal
+    4300004: "W\xFCrfel"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
