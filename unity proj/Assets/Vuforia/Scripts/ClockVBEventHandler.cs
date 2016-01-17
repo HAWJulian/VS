@@ -28,6 +28,8 @@ namespace Vuforia
 		/* booleans to control rotation */
         private bool leftrotate = false;
         private bool rightrotate = false;
+		private bool scaleup = false;
+		private bool scaledown = false;
 		/* collections to hold current displayed objects*/
         private GameObject[] objects;
 		private GameObject[] topsalt;
@@ -40,6 +42,9 @@ namespace Vuforia
 		private int SIZE = 3;
 		public enum State {OBJECT, TEXTURE};
 		private State state;
+		private float low = 0.005f;
+		private float high = 0.015f;
+		private float currentScale = 0.01f;
 
         void Start()
         {
@@ -101,9 +106,9 @@ namespace Vuforia
 
 
 			/* hide all objects not displayed at the beginning */	
-			for(int i = 0; i < objects2.GetLength(0); i++)
+			for(int i = 0; i < 3; i++)
             {
-				for (int j = 0; j < objects2.GetLength(1); j++) 
+				for (int j = 0; j < 3; j++) 
 				{
 					if (!(j == 0 && i == 0)) //Skip launched model 
 					{
@@ -134,6 +139,19 @@ namespace Vuforia
                 //set as new rotation
 				objects2[currentObject][texturecounter].transform.rotation = Quaternion.Euler(rotationVector);
             }
+			else if (scaleup || scaledown) 
+			{
+				if(scaleup && currentScale < high)
+				{
+					currentScale += Time.deltaTime / 300f;
+				}
+				else if(scaledown && currentScale > low)
+				{
+					currentScale -= Time.deltaTime / 300f;
+				}
+				tops[currentObject][texturecounter].transform.localScale = new Vector3(currentScale, currentScale, currentScale);
+				bots[currentObject][texturecounter].transform.localScale = new Vector3(currentScale, currentScale, currentScale);
+			}
         }
         //event which is called when a vb is activated 
         public void OnButtonPressed(VirtualButtonAbstractBehaviour vb)
@@ -154,6 +172,12 @@ namespace Vuforia
                         leftrotate = true;
                     }
                     break;
+				case "scaleup":
+					scaleup = true;
+					break;
+				case "scaledown":
+					scaledown = true;
+					break;
                 //on objectswitch, set current object as inactive, aktivate next obeject in list
 				case "objectswitch":
 					state = State.OBJECT;
@@ -177,6 +201,12 @@ namespace Vuforia
                 case "vbrl":
                     leftrotate = false;
                     break;
+				case "scaleup":
+					scaleup = false;
+					break;
+				case "scaledown":
+					scaledown = false;
+					break;
             }
         }
 
@@ -206,6 +236,8 @@ namespace Vuforia
 				new Vector3(objects2 [currentObject] [texturecounter].transform.eulerAngles.x,
 					y, /* apply absolute rotation */ 
 					objects2 [currentObject] [texturecounter].transform.eulerAngles.z);
+			tops[currentObject][texturecounter].transform.localScale = new Vector3(currentScale, currentScale, currentScale);
+			bots[currentObject][texturecounter].transform.localScale = new Vector3(currentScale, currentScale, currentScale);
 		}
     }
 }
