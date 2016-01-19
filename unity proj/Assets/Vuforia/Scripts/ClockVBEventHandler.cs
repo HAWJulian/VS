@@ -173,10 +173,16 @@ namespace Vuforia
                     }
                     break;
 				case "scaleup":
-					scaleup = true;
+					if(!scaledown)
+					{
+						scaleup = true;
+					}
 					break;
 				case "scaledown":
-					scaledown = true;
+					if(!scaleup)
+					{
+						scaledown = true;
+					}
 					break;
                 //on objectswitch, set current object as inactive, aktivate next obeject in list
 				case "objectswitch":
